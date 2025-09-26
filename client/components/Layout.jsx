@@ -1,10 +1,22 @@
+/*
+ * File name: Layout.jsx
+ * Student's Name: Manoj Kumar
+ * Student ID: 301433020
+ * Date: September 26, 2025
+ * Description: Navigation layout component with custom MK logo and responsive menu
+ */
+
+// ===== IMPORT STATEMENTS =====
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+// ===== LAYOUT COMPONENT WITH NAVIGATION =====
 export default function Layout() {
-  const location = useLocation();
+  // Get current location for active navigation highlighting
+  const currentPageLocation = useLocation();
 
-  const navStyle = {
+  // ===== NAVIGATION BAR STYLING =====
+  const navigationBarStyle = {
     backgroundColor: '#2c3e50',
     padding: '1rem 0',
     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
@@ -13,7 +25,7 @@ export default function Layout() {
     zIndex: '100'
   };
 
-  const containerStyle = {
+  const navigationContainerStyle = {
     maxWidth: '1200px',
     margin: '0 auto',
     padding: '0 1rem',
@@ -23,14 +35,14 @@ export default function Layout() {
     flexWrap: 'wrap'
   };
 
-  const logoContainerStyle = {
+  const brandLogoContainerStyle = {
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
     textDecoration: 'none'
   };
 
-  const logoShapeStyle = {
+  const customMKLogoStyle = {
     width: '50px',
     height: '50px',
     background: 'linear-gradient(135deg, #3498db, #2ecc71)',
@@ -45,14 +57,14 @@ export default function Layout() {
     transition: 'transform 0.3s ease, box-shadow 0.3s ease'
   };
 
-  const logoTextStyle = {
+  const portfolioBrandTextStyle = {
     color: '#ecf0f1',
     fontSize: '1.4rem',
     fontWeight: 'bold',
     letterSpacing: '0.5px'
   };
 
-  const navLinksStyle = {
+  const navigationLinksListStyle = {
     display: 'flex',
     listStyle: 'none',
     margin: 0,
@@ -60,7 +72,7 @@ export default function Layout() {
     gap: '1.5rem'
   };
 
-  const linkStyle = {
+  const navigationLinkStyle = {
     color: '#ecf0f1',
     textDecoration: 'none',
     padding: '0.5rem 1rem',
@@ -71,8 +83,8 @@ export default function Layout() {
     border: '2px solid transparent'
   };
 
-  const activeLinkStyle = {
-    ...linkStyle,
+  const activeNavigationLinkStyle = {
+    ...navigationLinkStyle,
     backgroundColor: '#3498db',
     fontWeight: 'bold',
     border: '2px solid #3498db',
@@ -81,12 +93,12 @@ export default function Layout() {
 
   return (
     <>
-      <nav style={navStyle}>
-        <div style={containerStyle} className="nav-container">
-          <Link to="/" style={logoContainerStyle}>
+      <nav style={navigationBarStyle}>
+        <div style={navigationContainerStyle} className="nav-container">
+          <Link to="/" style={brandLogoContainerStyle}>
             <div 
               className="logo-shape"
-              style={logoShapeStyle}
+              style={customMKLogoStyle}
               onMouseEnter={(e) => {
                 e.target.style.transform = 'scale(1.1) rotate(5deg)';
                 e.target.style.boxShadow = '0 6px 20px rgba(52, 152, 219, 0.5)';
@@ -98,14 +110,14 @@ export default function Layout() {
             >
               MK
             </div>
-            <span style={logoTextStyle}>My Portfolio</span>
+            <span style={portfolioBrandTextStyle}>My Portfolio</span>
           </Link>
-          <ul style={navLinksStyle} className="nav-links">
+          <ul style={navigationLinksListStyle} className="nav-links">
             <li>
               <Link 
                 to="/" 
                 className="nav-link"
-                style={location.pathname === '/' ? activeLinkStyle : linkStyle}
+                style={currentPageLocation.pathname === '/' ? activeNavigationLinkStyle : navigationLinkStyle}
               >
                 Home
               </Link>
@@ -114,7 +126,7 @@ export default function Layout() {
               <Link 
                 to="/About" 
                 className="nav-link"
-                style={location.pathname === '/About' ? activeLinkStyle : linkStyle}
+                style={currentPageLocation.pathname === '/About' ? activeNavigationLinkStyle : navigationLinkStyle}
               >
                 About Me
               </Link>
@@ -123,7 +135,7 @@ export default function Layout() {
               <Link 
                 to="/Services" 
                 className="nav-link"
-                style={location.pathname === '/Services' ? activeLinkStyle : linkStyle}
+                style={currentPageLocation.pathname === '/Services' ? activeNavigationLinkStyle : navigationLinkStyle}
               >
                 Services
               </Link>
@@ -132,7 +144,7 @@ export default function Layout() {
               <Link 
                 to="/project" 
                 className="nav-link"
-                style={location.pathname === '/project' ? activeLinkStyle : linkStyle}
+                style={currentPageLocation.pathname === '/project' ? activeNavigationLinkStyle : navigationLinkStyle}
               >
                 Projects
               </Link>
@@ -141,7 +153,7 @@ export default function Layout() {
               <Link 
                 to="/contact" 
                 className="nav-link"
-                style={location.pathname === '/contact' ? activeLinkStyle : linkStyle}
+                style={currentPageLocation.pathname === '/contact' ? activeNavigationLinkStyle : navigationLinkStyle}
               >
                 Contact Me
               </Link>
