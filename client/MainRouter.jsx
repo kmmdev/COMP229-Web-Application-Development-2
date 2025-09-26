@@ -1,7 +1,7 @@
 /*
  * File name: MainRouter.jsx
  * Student's Name: Manoj Kumar
- * Student ID: [Your Student ID]
+ * Student ID: 301433020
  * Date: September 26, 2025
  * Description: Main routing component for portfolio navigation
  */
