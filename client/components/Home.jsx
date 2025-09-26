@@ -1,8 +1,19 @@
+/*
+ * File name: Home.jsx
+ * Student's Name: Manoj Kumar
+ * Student ID: 301433020
+ * Date: September 26, 2025
+ * Description: Home page component with hero section, mission statement, and navigation cards
+ */
+
+// ===== IMPORT STATEMENTS =====
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// ===== HOME PAGE COMPONENT =====
 export default function Home() {
-    const buttonStyle = {
+    // ===== CALL-TO-ACTION BUTTON STYLES =====
+    const primaryCallToActionButtonStyle = {
         display: 'inline-block',
         padding: '12px 24px',
         margin: '0 10px',
@@ -18,8 +29,8 @@ export default function Home() {
         boxShadow: '0 4px 8px rgba(52, 152, 219, 0.3)'
     };
 
-    const secondaryButtonStyle = {
-        ...buttonStyle,
+    const secondaryCallToActionButtonStyle = {
+        ...primaryCallToActionButtonStyle,
         backgroundColor: 'transparent',
         color: '#3498db',
         border: '2px solid #3498db'
@@ -60,7 +71,7 @@ export default function Home() {
                 <div style={{ marginBottom: '4rem' }}>
                     <Link 
                         to="/About" 
-                        style={buttonStyle}
+                        style={primaryCallToActionButtonStyle}
                         onMouseEnter={(e) => {
                             e.target.style.backgroundColor = '#2980b9';
                             e.target.style.transform = 'translateY(-2px)';
@@ -76,7 +87,7 @@ export default function Home() {
                     </Link>
                     <Link 
                         to="/project" 
-                        style={secondaryButtonStyle}
+                        style={secondaryCallToActionButtonStyle}
                         onMouseEnter={(e) => {
                             e.target.style.backgroundColor = '#3498db';
                             e.target.style.color = 'white';
