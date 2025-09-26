@@ -1,0 +1,97 @@
+<!--
+ * File name: index.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Home page template with hero section and introduction
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <%- include('partials/header') %>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Hello, I'm <%= data.personal.name %></h1>
+                    <h2 class="hero-subtitle">Welcome to My Digital Portfolio</h2>
+                    <p class="hero-description">
+                        Explore my work, discover my skills, and let's connect to build something amazing together.
+                    </p>
+                    
+                    <!-- ===== CALL TO ACTION BUTTONS ===== -->
+                    <div class="hero-buttons">
+                        <a href="/about" class="btn btn-primary">
+                            <i class="fas fa-user"></i> Learn About Me
+                        </a>
+                        <a href="/projects" class="btn btn-secondary">
+                            <i class="fas fa-folder-open"></i> View My Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== MISSION STATEMENT SECTION ===== -->
+        <section class="mission-section">
+            <div class="container">
+                <h3 class="section-title">My Mission</h3>
+                <p class="mission-statement">
+                    "To leverage technology and creativity to solve complex problems, deliver exceptional user experiences, 
+                    and make a meaningful impact in everything I do. I believe in continuous learning, collaboration, 
+                    and the power of innovation to drive positive change."
+                </p>
+            </div>
+        </section>
+        
+        <!-- ===== QUICK NAVIGATION SECTION ===== -->
+        <section class="quick-nav-section">
+            <div class="container">
+                <h3 class="section-title">Explore My Portfolio</h3>
+                <div class="quick-nav-grid">
+                    <a href="/about" class="quick-nav-card">
+                        <i class="fas fa-user"></i>
+                        <h4>About Me</h4>
+                        <p>My story, background & experience</p>
+                    </a>
+                    <a href="/services" class="quick-nav-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Services</h4>
+                        <p>What I can do for you</p>
+                    </a>
+                    <a href="/projects" class="quick-nav-card">
+                        <i class="fas fa-folder-open"></i>
+                        <h4>Projects</h4>
+                        <p>My work & achievements</p>
+                    </a>
+                    <a href="/contact" class="quick-nav-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Contact Me</h4>
+                        <p>Let's connect & collaborate</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <%- include('partials/footer') %>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

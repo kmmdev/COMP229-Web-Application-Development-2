@@ -1,0 +1,93 @@
+<!--
+ * File name: projects.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Projects page template showcasing portfolio work
+-->* File name: projects.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301433020
+ * Date: September 26, 2025
+ * Description: Projects page template showcasing portfolio projects
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <%- include('partials/header') %>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section class="projects-section">
+            <div class="container">
+                <!-- ===== PAGE HEADER ===== -->
+                <div class="page-header">
+                    <h1 class="page-title">My Projects</h1>
+                    <p class="page-description">
+                        A showcase of my technical skills and professional accomplishments through hands-on projects
+                    </p>
+                </div>
+                
+                <!-- ===== PROJECTS GRID ===== -->
+                <div class="projects-grid">
+                    <% data.projects.forEach(function(project) { %>
+                        <div class="project-card">
+                            <!-- ===== PROJECT IMAGE ===== -->
+                            <div class="project-image">
+                                <img src="<%= project.imageUrl %>" alt="<%= project.title %>" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="image-placeholder" style="display: none;">
+                                    <i class="fas fa-image"></i>
+                                    <span>Project Image</span>
+                                </div>
+                            </div>
+                            
+                            <!-- ===== PROJECT CONTENT ===== -->
+                            <div class="project-content">
+                                <h2 class="project-title"><%= project.title %></h2>
+                                <p class="project-subtitle"><%= project.subtitle %></p>
+                                <p class="project-description"><%= project.description %></p>
+                                
+                                <!-- ===== TECHNOLOGY STACK ===== -->
+                                <div class="tech-stack">
+                                    <% project.technologies.forEach(function(tech) { %>
+                                        <span class="tech-tag"><%= tech %></span>
+                                    <% }); %>
+                                </div>
+                                
+                                <!-- ===== ROLE AND OUTCOME ===== -->
+                                <div class="project-details">
+                                    <div class="detail-section">
+                                        <h4 class="detail-title">My Role</h4>
+                                        <p class="detail-content"><%= project.role %></p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4 class="detail-title">Outcome</h4>
+                                        <p class="detail-content"><%= project.outcome %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <%- include('partials/footer') %>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

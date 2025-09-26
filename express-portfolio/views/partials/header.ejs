@@ -1,0 +1,57 @@
+<!--
+ * File name: header.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Navigation header partial template
+-->
+
+<header class="navbar">
+    <nav class="nav-container">
+        <!-- ===== BRAND LOGO ===== -->
+        <div class="brand-logo">
+            <a href="/" class="logo-link">
+                <div class="logo-shape">MK</div>
+                <span class="logo-text">My Portfolio</span>
+            </a>
+        </div>
+        
+        <!-- ===== NAVIGATION MENU ===== -->
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">
+                        <i class="fas fa-user"></i> About Me
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/services" class="nav-link <%= page === 'services' ? 'active' : '' %>">
+                        <i class="fas fa-cogs"></i> Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/projects" class="nav-link <%= page === 'projects' ? 'active' : '' %>">
+                        <i class="fas fa-folder-open"></i> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link <%= page === 'contact' ? 'active' : '' %>">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- ===== MOBILE MENU TOGGLE ===== -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </nav>
+</header>

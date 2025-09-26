@@ -1,0 +1,42 @@
+# Express Portfolio .gitignore
+
+# Dependencies
+express-portfolio/node_modules/
+express-portfolio/npm-debug.log*
+express-portfolio/yarn-debug.log*
+express-portfolio/yarn-error.log*
+
+# Runtime data
+express-portfolio/pids/
+express-portfolio/*.pid
+express-portfolio/*.seed
+express-portfolio/*.pid.lock
+
+# Coverage directory used by tools like istanbul
+express-portfolio/coverage/
+
+# Logs
+express-portfolio/logs/
+express-portfolio/*.log
+
+# Environment variables
+express-portfolio/.env
+express-portfolio/.env.local
+express-portfolio/.env.development.local
+express-portfolio/.env.test.local
+express-portfolio/.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo

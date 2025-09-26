@@ -1,0 +1,53 @@
+<!--
+ * File name: footer.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Footer partial template
+-->
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- ===== FOOTER BRAND ===== -->
+            <div class="footer-brand">
+                <h3><%= data.personal.name %></h3>
+                <p>Software Engineer & Developer</p>
+            </div>
+            
+            <!-- ===== QUICK LINKS ===== -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- ===== SOCIAL LINKS ===== -->
+            <div class="footer-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="<%= data.personal.linkedin %>" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="<%= data.personal.github %>" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:<%= data.personal.email %>" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== FOOTER BOTTOM ===== -->
+        <div class="footer-bottom">
+            <p>&copy; <%= new Date().getFullYear() %> <%= data.personal.name %>. All rights reserved.</p>
+            <p>Built with Express.js & EJS</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,95 @@
+<!--
+ * File name: about.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: About page template with personal information and experience
+-->* File name: about.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301433020
+ * Date: September 26, 2025
+ * Description: About page template with personal information and resume download
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <%- include('partials/header') %>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about-section">
+            <div class="container">
+                <!-- ===== PAGE HEADER ===== -->
+                <div class="page-header">
+                    <h1 class="page-title">About Me</h1>
+                </div>
+                
+                <!-- ===== PROFILE SECTION ===== -->
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <div class="image-placeholder">MK</div>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <h2 class="profile-name"><%= data.personal.name %></h2>
+                        <h3 class="profile-title"><%= data.personal.title %></h3>
+                        <p class="profile-description">
+                            I am a dedicated professional with a passion for technology and innovation. 
+                            With a strong background in IT industry, I bring a unique blend of 
+                            technical expertise and creative problem-solving skills to every project I undertake. 
+                            My commitment to continuous learning and professional growth drives me to stay 
+                            current with industry trends and best practices. I thrive in collaborative 
+                            environments and enjoy working with teams to deliver exceptional results that 
+                            exceed expectations.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- ===== RESUME DOWNLOAD SECTION ===== -->
+                <div class="resume-section">
+                    <h3 class="resume-title">Download My Resume</h3>
+                    <p class="resume-description">
+                        Get a comprehensive overview of my experience, skills, and qualifications.
+                    </p>
+                    <a href="/files/resume.pdf" download="Manoj_Kumar_Resume.pdf" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download PDF Resume
+                    </a>
+                </div>
+                
+                <!-- ===== SKILLS SECTION ===== -->
+                <div class="skills-section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Frontend Development</div>
+                        <div class="skill-item">React & TypeScript</div>
+                        <div class="skill-item">Node.js & Express</div>
+                        <div class="skill-item">Database Design</div>
+                        <div class="skill-item">Cloud Computing</div>
+                        <div class="skill-item">DevOps & CI/CD</div>
+                        <div class="skill-item">Mobile Development</div>
+                        <div class="skill-item">System Architecture</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <%- include('partials/footer') %>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

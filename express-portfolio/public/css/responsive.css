@@ -1,0 +1,549 @@
+/*
+ * File name: responsive.css
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Responsive CSS styles for mobile and tablet devices
+ */
+
+/* ===== TABLET STYLES (768px and below) ===== */
+@media (max-width: 768px) {
+    /* ===== CONTAINERS ===== */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.75rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-description {
+        font-size: 1.1rem;
+    }
+    
+    /* ===== NAVIGATION ===== */
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--background-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* ===== HERO SECTION ===== */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    /* ===== SECTIONS ===== */
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .page-header {
+        padding: 3rem 0 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1.1rem;
+    }
+    
+    /* ===== GRIDS ===== */
+    .grid {
+        gap: 1.5rem;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== ABOUT SECTION ===== */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .about-image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* ===== PROJECTS ===== */
+    .project-image {
+        height: 200px;
+        font-size: 2rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-links .btn {
+        width: 100%;
+    }
+    
+    /* ===== SERVICES ===== */
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* ===== CONTACT ===== */
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .contact-panel {
+        padding: 1.5rem 1rem;
+    }
+    
+    .panel-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .contact-form-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    /* ===== FOOTER ===== */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ===== MOBILE STYLES (480px and below) ===== */
+@media (max-width: 480px) {
+    /* ===== CONTAINERS ===== */
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    /* ===== CARDS ===== */
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+    
+    /* ===== ABOUT SECTION ===== */
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.75rem;
+    }
+    
+    /* ===== PROJECTS ===== */
+    .project-image {
+        height: 150px;
+        font-size: 1.5rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    /* ===== SERVICES ===== */
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    /* ===== CONTACT ===== */
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-panel {
+        padding: 1rem;
+    }
+    
+    .panel-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .panel-title {
+        font-size: 1rem;
+    }
+    
+    .contact-form-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    /* ===== BUTTONS ===== */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* ===== FORMS ===== */
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    
+    /* ===== FOOTER ===== */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== EXTRA SMALL MOBILE (360px and below) ===== */
+@media (max-width: 360px) {
+    /* ===== TYPOGRAPHY ===== */
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* ===== NAVIGATION ===== */
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    /* ===== SECTIONS ===== */
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .page-header {
+        padding: 2rem 0 1.5rem;
+    }
+    
+    /* ===== CARDS ===== */
+    .card {
+        padding: 1rem;
+    }
+    
+    /* ===== ABOUT ===== */
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* ===== CONTACT ===== */
+    .contact-form-section {
+        padding: 1rem;
+    }
+    
+    .form-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* ===== LANDSCAPE MOBILE STYLES ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    /* ===== NAVIGATION ===== */
+    .nav-menu {
+        height: calc(100vh - 70px);
+        top: 70px;
+    }
+    
+    /* ===== SECTIONS ===== */
+    .page-header {
+        padding: 2rem 0 1.5rem;
+    }
+}
+
+/* ===== HIGH RESOLUTION DISPLAYS ===== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .page-title {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .header,
+    .footer,
+    .mobile-menu-toggle,
+    .btn {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-top: 0 !important;
+    }
+    
+    .page-header {
+        background: white !important;
+        color: black !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .section {
+        padding: 1rem 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    .card {
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: underline !important;
+    }
+    
+    .hero-section::before {
+        display: none !important;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-section::before {
+        animation: none !important;
+    }
+}
+
+/* ===== FOCUS STYLES FOR ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: no-preference) {
+    .nav-link:focus,
+    .btn:focus,
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-light: #0f172a;
+        --background-white: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-light: #94a3b8;
+        --border-color: #334155;
+    }
+    
+    .header {
+        background-color: var(--background-white);
+    }
+    
+    .card {
+        background-color: var(--background-white);
+        border-color: var(--border-color);
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        background-color: var(--background-white);
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+    
+    .contact-form-section {
+        background-color: var(--background-white);
+    }
+    
+    .contact-panel {
+        background-color: var(--background-white);
+    }
+    
+    .stat-item {
+        background-color: var(--background-white);
+    }
+}

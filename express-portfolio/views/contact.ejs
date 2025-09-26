@@ -1,0 +1,157 @@
+<!--
+ * File name: contact.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Contact page template with contact form and information
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <%- include('partials/header') %>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact-section">
+            <div class="container">
+                <!-- ===== PAGE HEADER ===== -->
+                <div class="page-header">
+                    <h1 class="page-title">Contact Me</h1>
+                    <p class="page-description">
+                        Ready to bring your project to life? Let's connect and discuss how I can help you achieve your goals.
+                    </p>
+                </div>
+                
+                <!-- ===== SUCCESS MESSAGE ===== -->
+                <% if (typeof success !== 'undefined') { %>
+                    <div class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <%= success %>
+                    </div>
+                <% } %>
+                
+                <!-- ===== CONTACT INFO GRID ===== -->
+                <div class="contact-info-grid">
+                    <!-- ===== EMAIL PANEL ===== -->
+                    <div class="contact-panel">
+                        <div class="panel-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="panel-title">Email</h3>
+                        <div class="panel-content">
+                            <a href="mailto:<%= data.personal.email %>"><%= data.personal.email %></a>
+                            <p>Professional inquiries and project discussions</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== PHONE PANEL ===== -->
+                    <div class="contact-panel">
+                        <div class="panel-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="panel-title">Phone</h3>
+                        <div class="panel-content">
+                            <a href="tel:<%= data.personal.phone %>"><%= data.personal.phone %></a>
+                            <p>Available Mon-Fri, 9AM-6PM EST</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== LOCATION PANEL ===== -->
+                    <div class="contact-panel">
+                        <div class="panel-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="panel-title">Location</h3>
+                        <div class="panel-content">
+                            <span><%= data.personal.location %></span>
+                            <p>Available for remote and on-site projects</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== LINKEDIN PANEL ===== -->
+                    <div class="contact-panel">
+                        <div class="panel-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3 class="panel-title">LinkedIn</h3>
+                        <div class="panel-content">
+                            <a href="<%= data.personal.linkedin %>" target="_blank">View Profile</a>
+                            <p>Professional networking and career updates</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== GITHUB PANEL ===== -->
+                    <div class="contact-panel">
+                        <div class="panel-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3 class="panel-title">GitHub</h3>
+                        <div class="panel-content">
+                            <a href="<%= data.personal.github %>" target="_blank">View Repositories</a>
+                            <p>Code repositories and open source contributions</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== RESPONSE TIME PANEL ===== -->
+                    <div class="contact-panel">
+                        <div class="panel-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="panel-title">Response Time</h3>
+                        <div class="panel-content">
+                            <span>Within 24 hours</span>
+                            <p>I prioritize quick and professional communication</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ===== CONTACT FORM ===== -->
+                <div class="contact-form-section">
+                    <h3 class="form-title">Send Me a Message</h3>
+                    <form action="/contact" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <%- include('partials/footer') %>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
