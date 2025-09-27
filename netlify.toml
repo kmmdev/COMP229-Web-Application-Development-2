@@ -1,15 +1,27 @@
 [build]
   base = "express-portfolio"
   publish = "public"
-  command = "npm install"
+  command = "npm install && npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
 
-[functions]
-  directory = ".netlify/functions"
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
 
 [[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
+  from = "/projects"
+  to = "/projects.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
   status = 200

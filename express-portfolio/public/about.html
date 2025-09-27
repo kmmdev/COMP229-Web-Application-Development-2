@@ -1,0 +1,205 @@
+<!--
+ * File name: about.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699File name: about.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: About page template with personal information and experience
+-->* File name: about.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: About page template with personal information and resume download
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Manoj Kumar Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <!--
+ * File name: header.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Navigation header partial template
+-->
+
+<header class="navbar">
+    <nav class="nav-container">
+        <!-- ===== BRAND LOGO ===== -->
+        <div class="brand-logo">
+            <a href="/" class="logo-link">
+                <div class="logo-shape">MK</div>
+                <span class="logo-text">My Portfolio</span>
+            </a>
+        </div>
+        
+        <!-- ===== NAVIGATION MENU ===== -->
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/" class="nav-link ">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link active">
+                        <i class="fas fa-user"></i> About Me
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/services" class="nav-link ">
+                        <i class="fas fa-cogs"></i> Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/projects" class="nav-link ">
+                        <i class="fas fa-folder-open"></i> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link ">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- ===== MOBILE MENU TOGGLE ===== -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </nav>
+</header>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="about-section">
+            <div class="container">
+                <!-- ===== PAGE HEADER ===== -->
+                <div class="page-header">
+                    <h1 class="page-title">About Me</h1>
+                </div>
+                
+                <!-- ===== PROFILE SECTION ===== -->
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <div class="image-placeholder">MK</div>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <h2 class="profile-name">Manoj Kumar</h2>
+                        <h3 class="profile-title">Software Engineer</h3>
+                        <p class="profile-description">
+                            I am a dedicated professional with a passion for technology and innovation. 
+                            With a strong background in IT industry, I bring a unique blend of 
+                            technical expertise and creative problem-solving skills to every project I undertake. 
+                            My commitment to continuous learning and professional growth drives me to stay 
+                            current with industry trends and best practices. I thrive in collaborative 
+                            environments and enjoy working with teams to deliver exceptional results that 
+                            exceed expectations.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- ===== RESUME DOWNLOAD SECTION ===== -->
+                <div class="resume-section">
+                    <h3 class="resume-title">Download My Resume</h3>
+                    <p class="resume-description">
+                        Get a comprehensive overview of my experience, skills, and qualifications.
+                    </p>
+                    <a href="/files/resume.pdf" download="Manoj_Kumar_Resume.pdf" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download PDF Resume
+                    </a>
+                </div>
+                
+                <!-- ===== SKILLS SECTION ===== -->
+                <div class="skills-section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Frontend Development</div>
+                        <div class="skill-item">React & TypeScript</div>
+                        <div class="skill-item">Node.js & Express</div>
+                        <div class="skill-item">Database Design</div>
+                        <div class="skill-item">Cloud Computing</div>
+                        <div class="skill-item">DevOps & CI/CD</div>
+                        <div class="skill-item">Mobile Development</div>
+                        <div class="skill-item">System Architecture</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <!--
+ * File name: footer.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Footer partial template
+-->
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- ===== FOOTER BRAND ===== -->
+            <div class="footer-brand">
+                <h3>Manoj Kumar</h3>
+                <p>Software Engineer & Developer</p>
+            </div>
+            
+            <!-- ===== QUICK LINKS ===== -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- ===== SOCIAL LINKS ===== -->
+            <div class="footer-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:kumar.9195m@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== FOOTER BOTTOM ===== -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Manoj Kumar. All rights reserved.</p>
+            <p>Built with Express.js & EJS</p>
+        </div>
+    </div>
+</footer>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

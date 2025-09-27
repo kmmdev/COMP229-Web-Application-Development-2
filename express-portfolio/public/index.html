@@ -1,0 +1,205 @@
+<!--
+ * File name: index.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Home page template with hero section and introduction
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Manoj Kumar Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <!--
+ * File name: header.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Navigation header partial template
+-->
+
+<header class="navbar">
+    <nav class="nav-container">
+        <!-- ===== BRAND LOGO ===== -->
+        <div class="brand-logo">
+            <a href="/" class="logo-link">
+                <div class="logo-shape">MK</div>
+                <span class="logo-text">My Portfolio</span>
+            </a>
+        </div>
+        
+        <!-- ===== NAVIGATION MENU ===== -->
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link ">
+                        <i class="fas fa-user"></i> About Me
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/services" class="nav-link ">
+                        <i class="fas fa-cogs"></i> Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/projects" class="nav-link ">
+                        <i class="fas fa-folder-open"></i> Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-link ">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- ===== MOBILE MENU TOGGLE ===== -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </nav>
+</header>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Hello, I'm Manoj Kumar</h1>
+                    <h2 class="hero-subtitle">Welcome to My Digital Portfolio</h2>
+                    <p class="hero-description">
+                        Explore my work, discover my skills, and let's connect to build something amazing together.
+                    </p>
+                    
+                    <!-- ===== CALL TO ACTION BUTTONS ===== -->
+                    <div class="hero-buttons">
+                        <a href="/about" class="btn btn-primary">
+                            <i class="fas fa-user"></i> Learn About Me
+                        </a>
+                        <a href="/projects" class="btn btn-secondary">
+                            <i class="fas fa-folder-open"></i> View My Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== MISSION STATEMENT SECTION ===== -->
+        <section class="mission-section">
+            <div class="container">
+                <h3 class="section-title">My Mission</h3>
+                <p class="mission-statement">
+                    "To leverage technology and creativity to solve complex problems, deliver exceptional user experiences, 
+                    and make a meaningful impact in everything I do. I believe in continuous learning, collaboration, 
+                    and the power of innovation to drive positive change."
+                </p>
+            </div>
+        </section>
+        
+        <!-- ===== QUICK NAVIGATION SECTION ===== -->
+        <section class="quick-nav-section">
+            <div class="container">
+                <h3 class="section-title">Explore My Portfolio</h3>
+                <div class="quick-nav-grid">
+                    <a href="/about" class="quick-nav-card">
+                        <i class="fas fa-user"></i>
+                        <h4>About Me</h4>
+                        <p>My story, background & experience</p>
+                    </a>
+                    <a href="/services" class="quick-nav-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Services</h4>
+                        <p>What I can do for you</p>
+                    </a>
+                    <a href="/projects" class="quick-nav-card">
+                        <i class="fas fa-folder-open"></i>
+                        <h4>Projects</h4>
+                        <p>My work & achievements</p>
+                    </a>
+                    <a href="/contact" class="quick-nav-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Contact Me</h4>
+                        <p>Let's connect & collaborate</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===== FOOTER ===== -->
+    <!--
+ * File name: footer.ejs
+ * Student's Name: Manoj Kumar
+ * Student ID: 301546699
+ * Date: September 26, 2025
+ * Description: Footer partial template
+-->
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- ===== FOOTER BRAND ===== -->
+            <div class="footer-brand">
+                <h3>Manoj Kumar</h3>
+                <p>Software Engineer & Developer</p>
+            </div>
+            
+            <!-- ===== QUICK LINKS ===== -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- ===== SOCIAL LINKS ===== -->
+            <div class="footer-social">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:kumar.9195m@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== FOOTER BOTTOM ===== -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Manoj Kumar. All rights reserved.</p>
+            <p>Built with Express.js & EJS</p>
+        </div>
+    </div>
+</footer>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

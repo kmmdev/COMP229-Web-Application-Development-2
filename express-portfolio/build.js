@@ -1,31 +1,14 @@
 /*
- * File name: server.js (Netlify Function)
+ * File name: build.js
  * Student's Name: Manoj Kumar
  * Student ID: 301546699
  * Date: September 26, 2025
- * Description: Netlify serverless function for Express.js portfolio
+ * Description: Build script to generate static HTML from EJS templates
  */
 
-const express = require('express');
-const serverless = require('serverless-http');
-const path = require('path');
 const fs = require('fs');
-
-// ===== EXPRESS APP INITIALIZATION =====
-const app = express();
-
-// ===== MIDDLEWARE CONFIGURATION =====
-app.use(express.urlencoded({ extended: true })); // Parse form data
-app.use(express.json()); // Parse JSON data
-
-// ===== STATIC FILE SERVING =====
-app.use('/css', express.static(path.join(__dirname, '../../public/css')));
-app.use('/js', express.static(path.join(__dirname, '../../public/js')));
-app.use('/images', express.static(path.join(__dirname, '../../public/images')));
-
-// ===== VIEW ENGINE SETUP =====
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../../views'));
+const path = require('path');
+const ejs = require('ejs');
 
 // ===== PORTFOLIO DATA =====
 const portfolioData = {
@@ -107,67 +90,43 @@ const portfolioData = {
   ]
 };
 
-// ===== ROUTE HANDLERS =====
+// ===== BUILD PAGES =====
+const pages = [
+  { template: 'index', filename: 'index.html', title: 'Home - Manoj Kumar Portfolio', page: 'home' },
+  { template: 'about', filename: 'about.html', title: 'About - Manoj Kumar Portfolio', page: 'about' },
+  { template: 'projects', filename: 'projects.html', title: 'Projects - Manoj Kumar Portfolio', page: 'projects' },
+  { template: 'services', filename: 'services.html', title: 'Services - Manoj Kumar Portfolio', page: 'services' },
+  { template: 'contact', filename: 'contact.html', title: 'Contact - Manoj Kumar Portfolio', page: 'contact' }
+];
 
-// Home Page
-app.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Home - Manoj Kumar Portfolio',
-    data: portfolioData
-  });
-});
+// Create public directory if it doesn't exist
+const publicDir = path.join(__dirname, 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
 
-// About Page  
-app.get('/about', (req, res) => {
-  res.render('about', {
-    title: 'About - Manoj Kumar Portfolio',
-    data: portfolioData
-  });
-});
-
-// Projects Page
-app.get('/projects', (req, res) => {
-  res.render('projects', {
-    title: 'Projects - Manoj Kumar Portfolio', 
-    data: portfolioData
-  });
-});
-
-// Services Page
-app.get('/services', (req, res) => {
-  res.render('services', {
-    title: 'Services - Manoj Kumar Portfolio',
-    data: portfolioData
-  });
-});
-
-// Contact Page (GET)
-app.get('/contact', (req, res) => {
-  res.render('contact', {
-    title: 'Contact - Manoj Kumar Portfolio',
-    data: portfolioData,
-    message: null
-  });
-});
-
-// Contact Form Handler (POST)
-app.post('/contact', (req, res) => {
-  const { name, email, subject, message } = req.body;
+// Generate static HTML files
+pages.forEach(page => {
+  const templatePath = path.join(__dirname, 'views', `${page.template}.ejs`);
+  const outputPath = path.join(publicDir, page.filename);
   
-  // In a real application, you would send an email or save to database
-  console.log('Contact form submission:', { name, email, subject, message });
-  
-  res.render('contact', {
-    title: 'Contact - Manoj Kumar Portfolio',
-    data: portfolioData,
-    message: 'Thank you for your message! I will get back to you soon.'
-  });
+  try {
+    const template = fs.readFileSync(templatePath, 'utf8');
+    const html = ejs.render(template, {
+      title: page.title,
+      data: portfolioData,
+      message: null,
+      page: page.page
+    }, {
+      views: [path.join(__dirname, 'views')],
+      filename: templatePath
+    });
+    
+    fs.writeFileSync(outputPath, html);
+    console.log(`✅ Generated: ${page.filename}`);
+  } catch (error) {
+    console.error(`❌ Error generating ${page.filename}:`, error.message);
+  }
 });
 
-// 404 Error Handler
-app.use((req, res) => {
-  res.status(404).send('Page not found');
-});
-
-// Export the serverless function
-module.exports.handler = serverless(app);
+console.log('🎉 Static build complete!');
