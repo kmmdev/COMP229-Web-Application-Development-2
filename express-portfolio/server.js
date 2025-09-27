@@ -44,8 +44,7 @@ const portfolioData = {
       description: "A secure mobile banking application prototype featuring account management, transaction history, fund transfers, and biometric authentication. Emphasis on security, user experience, and compliance with banking regulations.",
       role: "Mobile App Developer and Security Specialist, handling app architecture, security implementation, biometric integration, and compliance testing.",
       outcome: "Created fully functional prototype with bank-level security features. Passed security audit with zero vulnerabilities and achieved 95% user satisfaction in testing.",
-      technologies: ["React Native", "Firebase", "Biometric Auth", "Encryption", "REST API"],
-      imageUrl: "/images/project1.jpg"
+      technologies: ["React Native", "Firebase", "Biometric Auth", "Encryption", "REST API"]
     },
     {
       id: 2,
@@ -54,8 +53,7 @@ const portfolioData = {
       description: "An intuitive project management tool designed to streamline team collaboration and productivity. Features include task assignment, progress tracking, deadline management, and real-time notifications with a clean, user-friendly interface.",
       role: "Frontend Developer and UI/UX Designer, responsible for creating responsive components, API integration, and designing the user experience workflow.",
       outcome: "Increased team productivity by 35% and reduced project completion time by 25%. Implemented real-time updates improving team communication efficiency.",
-      technologies: ["React", "REST API", "CSS3", "JavaScript", "Chart.js"],
-      imageUrl: "/images/project2.jpg"
+      technologies: ["React", "REST API", "CSS3", "JavaScript", "Chart.js"]
     },
     {
       id: 3,
@@ -64,8 +62,7 @@ const portfolioData = {
       description: "Led a comprehensive migration of enterprise development workflows from Azure DevOps to GitHub Enterprise. This project involved migrating repositories, build pipelines, work items, and establishing new CI/CD processes using GitHub Actions.",
       role: "DevOps Migration Lead responsible for migration strategy planning, repository transfers, pipeline conversions, team training, and establishing new GitHub workflows and security policies.",
       outcome: "Successfully migrated 200+ repositories and 200+ pipelines with zero data loss. Reduced build times by 30% and improved developer productivity by 25%. Trained 100+ team members on new GitHub workflows.",
-      technologies: ["GitHub Actions", "Azure DevOps", "PowerShell", "YAML", "Git", "Docker"],
-      imageUrl: "/images/project3.jpg"
+      technologies: ["GitHub Actions", "Azure DevOps", "PowerShell", "YAML", "Git", "Docker"]
     }
   ],
   services: [

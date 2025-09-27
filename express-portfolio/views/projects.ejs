@@ -1,12 +1,14 @@
 <!--
  * File name: projects.ejs
  * Student's Name: Manoj Kumar
+ * Student ID: 301546699File name: projects.ejs
+ * Student's Name: Manoj Kumar
  * Student ID: 301546699
  * Date: September 26, 2025
  * Description: Projects page template showcasing portfolio work
 -->* File name: projects.ejs
  * Student's Name: Manoj Kumar
- * Student ID: 301433020
+ * Student ID: 301546699
  * Date: September 26, 2025
  * Description: Projects page template showcasing portfolio projects
 -->
@@ -45,11 +47,18 @@
                         <div class="project-card">
                             <!-- ===== PROJECT IMAGE ===== -->
                             <div class="project-image">
-                                <img src="<%= project.imageUrl %>" alt="<%= project.title %>" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="image-placeholder" style="display: none;">
-                                    <i class="fas fa-image"></i>
-                                    <span>Project Image</span>
-                                </div>
+                                <% if (project.imageUrl) { %>
+                                    <img src="<%= project.imageUrl %>" alt="<%= project.title %>" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="image-placeholder" style="display: none;">
+                                        <i class="fas fa-image"></i>
+                                        <span>Project Image</span>
+                                    </div>
+                                <% } else { %>
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-code"></i>
+                                        <span>Project Preview</span>
+                                    </div>
+                                <% } %>
                             </div>
                             
                             <!-- ===== PROJECT CONTENT ===== -->
